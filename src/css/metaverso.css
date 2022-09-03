@@ -1,19 +1,41 @@
 .container-externo {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-block: 50px;
+    column-gap: 20px;
+    height: fit-content;
 }
 
 .container-metaverso {
     background-color: white;
+    border-radius: 20px;
     max-width: 850px;
-    min-height: 500px;
+    height: 100%;
     height: fit-content;
     width: 100%;
 }
 
-.container-metaverso {
-    border-radius: 20px;
+aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.metaverso:hover {
+    scale: 1.1;
+}
+
+.metaverso-imagem {
+    height: 100px;
+}
+
+.metaverso-descricao {
+    padding: 10px 5px;
+}
+
+.nome-metaverso {
+    font-size: 20px;
 }
 
 .imagem-metaverso-wrapper {
@@ -67,7 +89,7 @@
 
 .container-metaverso main {
     padding-inline: 20px;
-    padding-bottom: 20px;
+    padding-block: 40px;
 }
 
 .nome-metaverso, .nome-empresa a {
@@ -93,6 +115,7 @@ a:hover {
     font-style: italic;
     font-weight: 500;
     width: 90%;
+    text-align: start;
 }
 
 @media (max-width: 445px) {
@@ -100,5 +123,34 @@ a:hover {
         transform: none;
         float: none;
         margin: 10px auto 0;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+@media (max-width: 790px) {
+    .container-externo {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    aside {
+        flex-direction: row;
+        column-gap: 10px;
+    }
+
+    .metaverso {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .metaverso .tags {
+        display: none;
+    }
+
+    .nome-metaverso {
+        font-size: 18px;
     }
 }
