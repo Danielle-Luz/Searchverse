@@ -1,0 +1,104 @@
+.container-externo {
+    display: flex;
+    justify-content: center;
+    padding-block: 50px;
+}
+
+.container-metaverso {
+    background-color: white;
+    max-width: 750px;
+    min-height: 500px;
+    height: fit-content;
+    width: 100%;
+}
+
+.container-metaverso {
+    border-radius: 20px;
+}
+
+.imagem-metaverso-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+.imagem-metaverso {
+    background-color: gray;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url(../img/casa-placeholder.png);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    max-width: inherit;
+    transition: 300ms;
+}
+
+.imagem-metaverso-wrapper, .imagem-metaverso {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.imagem-metaverso:hover {
+    scale: 1.1;
+}
+
+.botao-acessar {
+    align-items: center;
+    background-color: #0E0B36;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-family: Montserrat;
+    font-size: 20px;
+    float: right;
+    margin-right: 15px;
+    text-align: center; 
+    transform: translateY(-30px);
+    transition: 500ms;
+    padding: 25px 15px;
+}
+
+.botao-acessar:hover {
+    scale: 1.05;
+}
+
+
+.container-metaverso main {
+    padding-inline: 20px;
+    padding-bottom: 20px;
+}
+
+.nome-metaverso, .nome-empresa a {
+    color: #1A1378;
+}
+
+.nome-empresa {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+a:hover {
+    opacity: 80%;
+}
+
+.descricao {
+    color: black;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 500;
+    width: 90%;
+}
+
+@media (max-width: 445px) {
+    .botao-acessar {
+        transform: none;
+        float: none;
+        margin: 10px auto 0;
+    }
+}
