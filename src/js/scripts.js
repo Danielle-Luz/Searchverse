@@ -2,7 +2,7 @@
 const categorias = document.querySelector ("#categorias");
 const empresas = document.querySelector ("#empresas");
 const plataformas = document.querySelector ("#plataformas");
-const metaversos = document.querySelectorAll (".metaverso");
+const metaversos = document.querySelectorAll (".link-metaverso");
 
 categorias.onclick = () => {
     categorias.classList.toggle ("bd-radius-select");
@@ -14,9 +14,10 @@ const barraPesquisa = document.getElementById ("barra-pesquisa");
 
 function criarMetaverso (metaverso) {
     const link = document.createElement ("a");
+    link.className = "link-metaverso";
     const endereco = window.location.href;
     if (endereco.split("/")[1] == "index.html" || endereco[endereco.length - 1] == "/") {
-        link.href = "src/img/metaverso.html";
+        link.href = "src/html/metaverso.html";
     } else {
         link.href = "metaverso.html";
     }
@@ -28,9 +29,8 @@ function criarMetaverso (metaverso) {
     const tags = document.createElement ("span");
     containerExterno.className = "metaverso";
     divImagem.className = "metaverso-imagem";
-    divImagem.style.backgroundImage = "url("+metaverso.img+")";
+    divImagem.style.backgroundImage = "url(https://ibb.co/129GKJK)";
     console.log (divImagem.style.backgroundImage);
-    console.log (metaverso.img);
     descricao.className = "metaverso-descricao";
     nomeMetaverso.className = "nome-metaverso";
     nomeMetaverso.innerText = metaverso.nome;
@@ -43,6 +43,12 @@ function criarMetaverso (metaverso) {
     containerExterno.appendChild (containerInterno);
     containerExterno.setAttribute ("data-id-bd", metaverso.id);
     link.appendChild (containerExterno);
+
+    link.addEventListener("click", () => {
+        alert (metaverso.getAttribute ("data-id-bd"))
+        localStorage.setItem ("metaversoSelecionado", metaverso.getAttribute ("data-id-bd"));
+    });
+
     return link;
 }
 
@@ -66,11 +72,4 @@ bBuscar.onclick = () => {
         listaFiltros.categorias = categorias.value;
     }
     localStorage.setItem ("filtros", JSON.stringify (listaFiltros));
-}
-
-
-for (let metaverso of metaversos) {
-    metaverso.addEventListener ("click", () => {
-        localStorage.setItem ("metaversoSelecionado", metaverso.getAttribute ("data-id-bd"));
-    });
 }
