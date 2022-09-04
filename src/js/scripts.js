@@ -1,5 +1,7 @@
 //CSS
 const categorias = document.querySelector ("#categorias");
+const empresas = document.querySelector ("#categorias");
+const plataformas = document.querySelector ("#categorias");
 
 categorias.onclick = () => {
     categorias.classList.toggle ("bd-radius-select");
@@ -8,17 +10,30 @@ categorias.onclick = () => {
 //INTEGRAÇÃO BACKEND
 const bBuscar = document.getElementById ("b-buscar");
 const barraPesquisa = document.getElementById ("barra-pesquisa");
-/*
-                <article class="metaverso">
-                    <figure>
-                        <div class="metaverso-imagem"></div>
-                        <figcaption class="metaverso-descricao">
-                            <h2 class="nome-metaverso">Nome do metaverso</h2>
-                            <span class="tags">#enem #inglês #meioambien...</span>
-                        </figcaption>
-                    </figure>
-                </article>
-*/
+
+function criarMetaverso (metaverso) {
+    const containerExterno = document.createElement ("article");
+    const containerInterno = document.createElement ("figure");
+    const divImagem = document.createElement ("div");
+    const descricao = document.createElement ("figcaption");
+    const nomeMetaverso = document.createElement ("h2");
+    const tags = document.createElement ("span");
+    containerExterno.className = "metaverso";
+    divImagem.className = "metaverso-imagem";
+    divImagem.style.backgroundImage = `url(${metaverso.img});`;
+    descricao.className = "metaverso-descricao";
+    nomeMetaverso.className = "nome-metaverso";
+    nomeMetaverso.innerText = metaverso.nome;
+    tags.className = "tags";
+    tags.innerHTML = metaverso.categoria;
+    descricao.appendChild (nomeMetaverso);
+    descricao.appendChild (tags);
+    containerInterno.appendChild (divImagem);
+    containerInterno.appendChild (descricao);
+    containerExterno.appendChild (containerInterno);
+    containerExterno.setAttribute ("data-id-bd", metaverso.id);
+    return containerExterno;
+}
 
 bBuscar.onclick = () => {
     const resultadosBarraPesquisa = {};
@@ -26,4 +41,5 @@ bBuscar.onclick = () => {
     if (barraPesquisa) {
         localStorage.setItem ("pesquisa", barraPesquisa.value);
     }
+    if ()
 }

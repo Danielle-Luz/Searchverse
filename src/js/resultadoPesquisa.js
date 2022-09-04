@@ -2,30 +2,6 @@ const containerMetaversos = document.querySelector (".container-metaversos");
 const pesquisa = localStorage.getItem ("pesquisa");
 const quantidadeResultado = document.querySelector (".titulo");
 
-function criarMetaverso (metaverso) {
-    const containerExterno = document.createElement ("article");
-    const containerInterno = document.createElement ("figure");
-    const divImagem = document.createElement ("div");
-    const descricao = document.createElement ("figcaption");
-    const nomeMetaverso = document.createElement ("h2");
-    const tags = document.createElement ("span");
-    containerExterno.className = "metaverso";
-    divImagem.className = "metaverso-imagem";
-    divImagem.style.backgroundImage = metaverso.img;
-    descricao.className = "metaverso-descricao";
-    nomeMetaverso.className = "nome-metaverso";
-    nomeMetaverso.innerText = metaverso.nome;
-    tags.className = "tags";
-    tags.innerHTML = metaverso.categoria;
-    descricao.appendChild (nomeMetaverso);
-    descricao.appendChild (tags);
-    containerInterno.appendChild (divImagem);
-    containerInterno.appendChild (descricao);
-    containerExterno.appendChild (containerInterno);
-    containerExterno.setAttribute ("data-id-bd", metaverso.id);
-    return containerExterno;
-}
-
 const retorno = fetch ("https://searchverse-api.herokuapp.com/metaverses")
 .then (retornoDados => {
     return retornoDados.json ();
@@ -36,6 +12,7 @@ const retorno = fetch ("https://searchverse-api.herokuapp.com/metaverses")
             let valor = retornoJson[id][metaverso];
             if (String (valor).toLowerCase () == pesquisa.toLowerCase ()) {
                 quantidade++;
+                console.log (retornoJson[id].img);
                 const elementoMetaverso = criarMetaverso (retornoJson[id]);
                 containerMetaversos.appendChild (elementoMetaverso);
                 break;
