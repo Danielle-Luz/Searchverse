@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
 }
 
-.header-container, .pesquisa-container, footer, .container-barra-pesquisa, .redes-sociais {
+.header-container, .pesquisa-container, footer, .container-barra-pesquisa, .redes-sociais, #b-buscar {
     display: flex;
 }
 
@@ -69,30 +69,30 @@ input {
     width: 350px;
 }
 
-#categorias, input, button {
+#categorias, input, #b-buscar {
     border: none;
     height: 35px;
     outline: none;
 }
 
-#categorias, button {
+#categorias, #b-buscar {
     background-color: #1A1378;
 }
 
-.pesquisa-container button {
+.pesquisa-container #b-buscar {
     border-radius: 0px 10px 10px 0px;
     padding-inline: 15px;
 }
 
-.pesquisa-container button, select {
+.pesquisa-container #b-buscar, select {
     cursor: pointer;
 }
 
-.pesquisa-container button:hover {
+.pesquisa-container #b-buscar:hover {
     opacity: 80%;
 }
 
-.pesquisa-container button img {
+.pesquisa-container #b-buscar img {
     width: 18px;
 }
 

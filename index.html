@@ -6,18 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Searchverse</title>
         <meta name="description" content="Encontre o multiverso da sua escolha! Busque por categoria, encontre e entre no multiverso que preferir ">
-        <link rel="stylesheet" href="src/css/styles.css">
-        <link rel="stylesheet" href="src/css/homepage.css">
-        <link rel="stylesheet" href="src/css/cards.css">
+        <link rel="stylesheet" href="src\css\styles.css">
+        <link rel="stylesheet" href="src\css\cards.css">
         <link rel="icon" href="src\img\favicon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="prec2onnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="header-container">
             <a href="index.html"><img class="logo" src="src/img/logo.png" alt="logo do searchverse, desenho de um óculos VR sobre o nome 'Searchverse'"></a>
-            <form class="pesquisa-container">
+            <div class="pesquisa-container">
+                <label for="categorias" hidden>Categoria</label>
+                <div id="div-categorias">
+                    <select class="bd-radius-categorias" id="categorias">
+                        <option value="" disabled selected></option>
+                    </select>
+                </div>
                 <label for="categorias" hidden>Categoria</label>
                 <div id="div-categorias">
                     <select class="bd-radius-categorias" id="categorias">
@@ -27,9 +32,9 @@
                 <div class="container-barra-pesquisa">
                     <label for="barra-pesquisa" hidden>Insira o nome de um metaverso</label>
                     <input type="search" name="barra-pesquisa" id="barra-pesquisa">
-                    <button><img src="src/img/lupa.svg" alt="ícone de lupa"></button>
+                    <a href="src\html\resultado-pesquisa.html" id="b-buscar"><img src="src/img/lupa.svg" alt="ícone de lupa"></a>
                 </div>
-            </form>
+            </div>
         </header>
         <main class="container-externo">
             <h1 class="titulo">Encontre o multiverso da sua escolha</h1>
