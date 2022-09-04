@@ -2,7 +2,6 @@
 const categorias = document.querySelector ("#categorias");
 const empresas = document.querySelector ("#empresas");
 const plataformas = document.querySelector ("#plataformas");
-const metaversos = document.querySelectorAll (".link-metaverso");
 
 categorias.onclick = () => {
     categorias.classList.toggle ("bd-radius-select");
@@ -13,14 +12,7 @@ const bBuscar = document.getElementById ("b-buscar");
 const barraPesquisa = document.getElementById ("barra-pesquisa");
 
 export function criarMetaverso (metaverso) {
-    const link = document.createElement ("a");
-    link.className = "link-metaverso";
-    const endereco = window.location.href;
-    if (endereco.split("/")[1] == "index.html" || endereco[endereco.length - 1] == "/") {
-        link.href = "src/html/metaverso.html";
-    } else {
-        link.href = "metaverso.html";
-    }
+    const container = document.createElement ("div");
     const containerExterno = document.createElement ("article");
     const containerInterno = document.createElement ("figure");
     const divImagem = document.createElement ("div");
@@ -42,14 +34,9 @@ export function criarMetaverso (metaverso) {
     containerInterno.appendChild (descricao);
     containerExterno.appendChild (containerInterno);
     containerExterno.setAttribute ("data-id-bd", metaverso.id);
-    link.appendChild (containerExterno);
+    container.appendChild (containerExterno);
 
-    link.onclick = () => {
-        alert (metaverso.getAttribute ("data-id-bd"));
-        localStorage.setItem ("metaversoSelecionado", metaverso.getAttribute ("data-id-bd"));
-    };
-
-    return link;
+    return container;
 }
 
 bBuscar.onclick = () => {

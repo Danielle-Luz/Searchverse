@@ -11,12 +11,10 @@ const quantidadeResultado = document.querySelector (".titulo");
     }).then (retornoJson => {
         let quantidade = 0;
         for (let id in retornoJson) {
-            console.log (retornoJson[id])
             for (let metaverso in retornoJson[id]) {
                 let valor = retornoJson[id][metaverso];
                 if (String (valor).toLowerCase () == filtros.pesquisa.toLowerCase ()) {
                     quantidade++;
-                    console.log (retornoJson[id].img);
                     const elementoMetaverso = criarMetaverso (retornoJson[id]);
                     containerMetaversos.appendChild (elementoMetaverso);
                     break;
