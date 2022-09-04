@@ -32,6 +32,8 @@ figure {
 
 .metaverso-imagem {
     background-color: gray;
+    background-position: center;
+    background-size: cover;
     border-radius: 10px 10px 0 0;
     height: 120px;
     width: 100%;

@@ -59,6 +59,7 @@ select {
     border-radius: 10px;
     color: white;
     font-family: Montserrat;
+    font-size: 15px;
     padding-left: 10px;
     flex-grow: 1;
 }
@@ -91,6 +92,7 @@ select, #b-buscar {
 
 .pesquisa-container {
     flex-direction: column-reverse;
+    gap: 10px;
 }
 
 .pesquisa-container #b-buscar {
