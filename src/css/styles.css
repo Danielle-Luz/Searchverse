@@ -21,10 +21,11 @@ body {
 
 .pesquisa-container {
     align-items: center;
+    box-sizing: border-box;
     justify-content: center;
-    max-width:500px;
+    max-width: 600px;
     row-gap: 5px;
-    padding-inline: 5px;
+    padding-inline: 20px;
     width: 100%;
 }
 
@@ -34,12 +35,13 @@ body {
 }
 
 .header-container {
+    box-shadow: -5px 0 25px 0px black;
     column-gap: 40px;
     padding-block: 20px;
 }
 
 .logo {
-    width: 150px;
+    width: 200px;
 }
 
 .container-barra-pesquisa {
@@ -132,7 +134,7 @@ a {
     font-size: 25px;
     font-weight: bold;
     color: white;
-    text-align: center;
+    text-align: start;
 }
 
 .container-metaversos {
