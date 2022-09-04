@@ -1,3 +1,5 @@
+import { criarMetaverso } from "./scripts.js";
+
 const containerMetaversos = document.querySelector (".container-metaversos");
 const filtros = JSON.parse (localStorage.getItem ("filtros"));
 const quantidadeResultado = document.querySelector (".titulo");
@@ -8,7 +10,7 @@ const quantidadeResultado = document.querySelector (".titulo");
         return retornoDados.json ();
     }).then (retornoJson => {
         let quantidade = 0;
-        for (id in retornoJson) {
+        for (let id in retornoJson) {
             console.log (retornoJson[id])
             for (let metaverso in retornoJson[id]) {
                 let valor = retornoJson[id][metaverso];
@@ -31,7 +33,7 @@ if (filtros.plataformas) {
         return retornoDados.json ();
     }).then (retornoJson => {
         let quantidade = 0;
-        for (id in retornoJson) {
+        for (let id in retornoJson) {
             const elementoMetaverso = criarMetaverso (retornoJson[id]);
             containerMetaversos.appendChild (elementoMetaverso);
             quantidade++;
@@ -46,7 +48,7 @@ if (filtros.empresas) {
         return retornoDados.json ();
     }).then (retornoJson => {
         let quantidade = 0;
-        for (id in retornoJson) {
+        for (let id in retornoJson) {
             const elementoMetaverso = criarMetaverso (retornoJson[id]);
             containerMetaversos.appendChild (elementoMetaverso);
             quantidade++;
@@ -61,7 +63,7 @@ if (filtros.categorias) {
         return retornoDados.json ();
     }).then (retornoJson => {
         let quantidade = 0;
-        for (id in retornoJson) {
+        for (let id in retornoJson) {
             const elementoMetaverso = criarMetaverso (retornoJson[id]);
             containerMetaversos.appendChild (elementoMetaverso);
             quantidade++;

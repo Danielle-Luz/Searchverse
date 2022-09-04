@@ -1,3 +1,5 @@
+import { criarMetaverso } from "./scripts.js";
+
 const metaversoSelecionado = localStorage.getItem ("metaversoSelecionado");
 const containerExterno = document.querySelector (".container-externo");
 const metaversosAside = document.querySelectorAll (".metaverso");
