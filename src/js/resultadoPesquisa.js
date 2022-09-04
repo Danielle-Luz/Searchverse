@@ -33,7 +33,8 @@ const retorno = fetch ("https://searchverse-api.herokuapp.com/metaverses")
     let quantidade = 0;
     for (id in retornoJson) {
         for (let metaverso in retornoJson[id]) {
-            if (retornoJson[id][metaverso] == pesquisa) {
+            let valor = retornoJson[id][metaverso];
+            if (String (valor).toLowerCase () == pesquisa.toLowerCase ()) {
                 quantidade++;
                 const elementoMetaverso = criarMetaverso (retornoJson[id]);
                 containerMetaversos.appendChild (elementoMetaverso);
