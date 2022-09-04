@@ -1,3 +1,4 @@
+
 .container-metaversos {
     display: flex;
     justify-content: flex-start;
@@ -14,6 +15,7 @@
     height: fit-content;
     width: 300px;
     transition: 300ms;
+    cursor: pointer;
 }
 
 .metaverso:hover {
@@ -46,6 +48,7 @@ figure {
 }
 
 .nome-metaverso {
+    font-size: 20px;
     margin: 0;
     padding-block: 5px;
 }

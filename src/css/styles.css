@@ -46,7 +46,7 @@ body {
     width: 100%;
 }
 
-#empresas, #categorias {
+select {
     appearance: none;
     background-image: url(../img/expand-arrow.svg);
     background-position: 90%;
@@ -73,13 +73,13 @@ input {
     border-bottom-left-radius: 10px;
 }
 
-#empresas, #categorias, input, #b-buscar {
+select, input, #b-buscar {
     border: none;
     height: 35px;
     outline: none;
 }
 
-#empresas, #categorias, #b-buscar {
+select, #b-buscar {
     background-color: #1A1378;
 }
 
@@ -114,16 +114,23 @@ input {
     box-sizing: border-box;
     max-width: 1000px;
     margin: 0 auto;
-    height: fit-content;
+    min-height: 100vh;
+    height: fit-content; 
     padding-bottom: 50px;
     padding-inline: 15px;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color:unset;
 }
 
 .titulo {
     font-size: 25px;
     font-weight: bold;
     color: white;
+    text-align: center;
 }
 
 .container-metaversos {
@@ -193,7 +200,7 @@ footer {
         width: 100%;
     }
 
-    #empresas, #categorias {
+    select {
         border-radius: 10px;
         width: 100%;
     }
