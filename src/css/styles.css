@@ -1,12 +1,12 @@
 body {
-    background-image: linear-gradient(#0E0B36, #00030D);
+    background-image: linear-gradient(to right top, #040416, #1c1c6a, #040416);
     font-family: Montserrat;
     height: fit-content;
     margin: 0 auto;
 }
 
 .header-container {
-    background-color: #00030D;
+    background-color: #02020c;
 }
 
 .header-container {
@@ -35,7 +35,7 @@ body {
 }
 
 .header-container {
-    box-shadow: -5px 0 25px 0px black;
+    box-shadow: -5px 0 25px 15px #0a0a24;
     column-gap: 40px;
     padding-block: 20px;
 }
@@ -83,7 +83,7 @@ select, input, #b-buscar {
 }
 
 select, #b-buscar {
-    background-color: #1A1378;
+    background-color: #1c1c6a;
 }
 
 .selects {
@@ -157,7 +157,7 @@ a {
 }
 
 footer {
-    background-color: black;
+    background-color: #02020c;
     color: white;
     flex-direction: column;
     padding-block: 50px;

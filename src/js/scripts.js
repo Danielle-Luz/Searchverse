@@ -22,7 +22,6 @@ export function criarMetaverso (metaverso) {
     containerExterno.className = "metaverso";
     divImagem.className = "metaverso-imagem";
     divImagem.style.backgroundImage = "url(" + metaverso.img + ")";
-    console.log (divImagem.style.backgroundImage);
     descricao.className = "metaverso-descricao";
     nomeMetaverso.className = "nome-metaverso";
     nomeMetaverso.innerText = metaverso.nome;
